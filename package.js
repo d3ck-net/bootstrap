@@ -10,13 +10,19 @@ Package.describe({
     documentation: 'README.md'
 });
 
+Npm.depends({
+    glob: '6.0.1'
+});
+
 Package.onUse(function (api) {
     api.versionsFrom('1.3');
+
+    var globSync = Npm.require('glob').sync;
 
     api.use('less');
 
 
-    api.addFiles('less/bootstrap.less', 'client');
+    api.addFiles(globSync('*.less'), 'client');
     api.addFiles('bootstrap.min.js', 'client');
 
 });
