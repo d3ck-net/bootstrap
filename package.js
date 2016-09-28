@@ -20,6 +20,7 @@ Package.onUse(function (api) {
     api.use('less');
 
     api.addFiles('bootstrap.min.js', 'client');
+    api.mainModule('less/bootstrap.less', 'client');
 
     api.mainModule('less/bootstrap.less');
 
