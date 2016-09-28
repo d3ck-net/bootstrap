@@ -17,13 +17,11 @@ Npm.depends({
 Package.onUse(function (api) {
     api.versionsFrom('1.3');
 
-    var globSync = Npm.require('glob').sync;
-
     api.use('less');
 
-
-    api.addFiles(globSync('*.less'), 'client');
     api.addFiles('bootstrap.min.js', 'client');
+
+    api.mainModule('less/bootstrap.less');
 
 });
 
