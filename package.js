@@ -17,8 +17,6 @@ Npm.depends({
 Package.onUse(function (api) {
     api.versionsFrom('1.3');
 
-    // var globSync = Npm.require('glob').sync;
-
     api.use('less');
 
     api.addAssets('fonts/glyphicons-halflings-regular.ttf', 'client');
@@ -30,6 +28,7 @@ Package.onUse(function (api) {
     api.addFiles('bootstrap.min.js', 'client');
 
     api.addFiles('less/bootstrap.less', 'client');
+
 
 });
 
