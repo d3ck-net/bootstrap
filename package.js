@@ -21,9 +21,15 @@ Package.onUse(function (api) {
 
     api.use('less');
 
+    api.addAssets('fonts/glyphicons-halflings-regular.ttf', 'client');
+    api.addAssets('fonts/glyphicons-halflings-regular.eot', 'client');
+    api.addAssets('fonts/glyphicons-halflings-regular.svg', 'client');
+    api.addAssets('fonts/glyphicons-halflings-regular.woff', 'client');
+    api.addAssets('fonts/glyphicons-halflings-regular.woff2', 'client');
 
     api.addFiles('bootstrap.min.js', 'client');
-    api.mainModule('less/bootstrap.less', 'client');
+
+    api.addFiles('less/bootstrap.less', 'client');
 
 });
 
