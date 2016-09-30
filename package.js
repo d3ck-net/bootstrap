@@ -10,9 +10,6 @@ Package.describe({
     documentation: 'README.md'
 });
 
-Npm.depends({
-    glob: '6.0.1'
-});
 
 Package.onUse(function (api) {
     api.versionsFrom('1.3');
